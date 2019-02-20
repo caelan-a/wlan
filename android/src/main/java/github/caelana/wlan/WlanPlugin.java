@@ -29,9 +29,9 @@ public class WlanPlugin implements MethodCallHandler {
     if (call.method.equals("isWifiEnabled")) {
       WifiManager wifi = (WifiManager) mContext.getSystemService(Context.WIFI_SERVICE);
       if (wifi.isWifiEnabled()) {
-        result.success(true);
+        result.success("true");
       } else {
-        result.success(false);
+        result.success("false");
       }
     } else {
       result.notImplemented();

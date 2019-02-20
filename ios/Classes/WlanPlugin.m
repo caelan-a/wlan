@@ -11,7 +11,7 @@
 
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
   if ([@"isWifiEnabled" isEqualToString:call.method]) {
-    result(@true);
+    result(@"true");
   } else {
     result(FlutterMethodNotImplemented);
   }

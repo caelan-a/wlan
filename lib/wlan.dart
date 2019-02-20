@@ -7,7 +7,7 @@ class Wlan {
       const MethodChannel('github.caelana/wlan');
 
   static Future<bool> get isWifiEnabled async {
-    final bool enabled = await _channel.invokeMethod('isWifiEnabled');
-    return enabled;
+    final String enabled = await _channel.invokeMethod('isWifiEnabled');
+    return enabled == "true";
   }
 }
